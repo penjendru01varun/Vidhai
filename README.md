@@ -14,7 +14,47 @@ Rural girl students in Theni face a distinct set of challenges that lead to high
 
 ---
 
-## 2. The Solution: A Multi-Platform Ecosystem
+## 2. Overall System Architecture
+The KALVI KAVALAR ecosystem consists of 4 distinct frontend interfaces powered by a central Firebase Firestore real-time database and a cluster of 15 AI Agents.
+
+### 🏗️ Architecture Diagram
+```mermaid
+graph TD
+    subgraph "Frontend Layer"
+        SA[Student App - Next.js]
+        PA[Parent App - Voice First]
+        AD[Admin Dashboard - Strategic]
+        TA[Teacher Kiosk - Offline Sync]
+    end
+
+    subgraph "Core Cloud Architecture"
+        Firebase[(Firebase Firestore / Real-time DB)]
+        Auth[Firebase RBAC / Auth]
+        Logic{Genkit AI / Node.js Logic}
+    end
+
+    subgraph "15-Agent Intelligence"
+        Predictive[Agents 1, 14, 12 - Risks]
+        Comm[Agents 2, 6, 7 - Comms]
+        Intervention[Agents 3, 5, 9 - Support]
+        Engagement[Agents 4, 10, 8 - Content]
+        Ops[Agents 11, 13, 15 - Infra]
+    end
+
+    SA <--> Firebase
+    PA <--> Firebase
+    AD <--> Firebase
+    TA <--> Firebase
+    
+    Firebase <--> Logic
+    Logic <--> Predictive
+    Logic <--> Comm
+    Logic <--> Intervention
+```
+
+---
+
+## 3. The Solution: A Multi-Platform Ecosystem
 Kalvi Kavalar is not just an app; it is a **15-Agent AI Intelligence System** distributed across four specialized interfaces:
 
 ### Student App (Empowerment Theme)
@@ -34,7 +74,30 @@ Kalvi Kavalar is not just an app; it is a **15-Agent AI Intelligence System** di
 
 ---
 
-## 3. Deep-Dive: The 15 AI Intelligence Agents
+## 4. Operational Workflow (Data Flow)
+How the system reacts when a student is absent during a harvest season:
+
+### 🌊 Data Flow Diagram
+```mermaid
+sequenceDiagram
+    participant T as Teacher (Kiosk)
+    participant DB as Firebase (Firestore)
+    participant AI as AI Agents (1, 14, 6, 7)
+    participant P as Parent (Phone)
+    participant AD as Admin (Dashboard)
+
+    T->>DB: Marks "Absent" in Andipatti Village
+    Note over AI: Agent 14 (Seasonal) & Agent 1 (Predictive) Scan
+    DB->>AI: Trigger Dropout Analysis
+    AI->>AI: Calculate Risk (Harvest Season + 3rd Absence)
+    AI->>P: Trigger Agent 6 (Localized Voice Call)
+    AI->>AD: Trigger Agent 7 (Emergency Alert - Child Labor Risk)
+    AD->>T: Notify Teacher to follow up during lunch
+```
+
+---
+
+## 5. Deep-Dive: The 15 AI Intelligence Agents
 The heart of Kalvi Kavalar is its distributed intelligence. Each agent performs a specific, critical role in the dropout prevention funnel:
 
 ### Core Agents
@@ -60,22 +123,12 @@ The heart of Kalvi Kavalar is its distributed intelligence. Each agent performs 
 
 ---
 
-## 4. Tech Stack
+## 6. Tech Stack
 *   **Frontend**: Next.js 14, TypeScript, Tailwind CSS.
 *   **Animations**: Framer Motion (Advanced physics, staggered flows, persistent micro-animations).
 *   **AI Framework**: Google Genkit AI (Predictive Modeling & Flows).
 *   **Backend**: Firebase Firestore (Real-time data architecture with hierarchical security).
 *   **Voice Integration**: Simulated Localized IVR Logic.
-
----
-
-## 5. Real-Life Impact Scenarios
-
-### Scenario 1: Preemptive Seasonal Intervention
-During the July grape harvest, the **Seasonal Risk Manager (Agent 14)** flags a cluster of students in a specific village. Before they can drop out for labor, the **Voice Assistant (Agent 6)** calls the household to discuss scholarships discovered by **Agent 9**, shifting the family's focus back to education.
-
-### Scenario 2: Emergency Risk Response
-If a student misses three consecutive days, the **Predictive Dropout Detector (Agent 1)** calculates a critical risk. The **Emergency Dispatcher (Agent 7)** immediately opens a high-priority ticket on the **Admin Dashboard** and notifies a local community mentor via the **Matchmaker (Agent 3)**.
 
 ---
 *Developed for the Empowerment of Rural Girls.*
