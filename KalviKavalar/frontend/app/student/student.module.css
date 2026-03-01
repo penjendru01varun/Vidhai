@@ -1,0 +1,232 @@
+:root {
+  --magenta-primary: #e91e63;
+  --gold-primary: #ffd700;
+  --background-dark: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glow-magenta: rgba(233, 30, 99, 0.4);
+}
+
+.container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #1e1b4b, var(--background-dark));
+  color: white;
+  padding: 1.5rem;
+  font-family: 'Lexend', sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.greeting span {
+  background: linear-gradient(90deg, var(--magenta-primary), #ff4081);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user_avatar_container {
+  position: relative;
+}
+
+.avatar_glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: var(--magenta-primary);
+  filter: blur(15px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.avatar_circle {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--magenta-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.streak_card {
+  background: linear-gradient(135deg, #e91e63, #880e4f);
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(233, 30, 99, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.streak_bg_icon {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  font-size: 8rem;
+  opacity: 0.1;
+  transform: rotate(-15deg);
+}
+
+.fire_glow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffeb3b, transparent);
+  filter: blur(30px);
+  opacity: 0.5;
+}
+
+.streak_info h3 {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+.streak_info p {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.coin_belt {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.coin_label_group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.coin_icon_wrapper {
+  background: rgba(255, 215, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.coin_value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.stats_grid_complex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.glass_stat_card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+  border-radius: 22px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress_arc_placeholder {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.empowerment_banner {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.1), rgba(233, 30, 99, 0.1));
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+  border-radius: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quote_symbol {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  opacity: 0.1;
+}
+
+.nav_bar_floating {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.nav_item_complex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.tab_indicator {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  background: var(--magenta-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--magenta-primary);
+}
+
+.active_pill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 4px;
+  background: var(--magenta-primary);
+  border-radius: 2px;
+}

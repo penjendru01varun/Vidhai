@@ -1,0 +1,108 @@
+:root {
+    --admin-slate: #334155;
+    --admin-indigo: #4f46e5;
+    --admin-bg: #0f172a;
+}
+
+.admin_layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--admin-bg);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(30, 41, 59, 0.7);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar_logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--admin-indigo);
+    margin-bottom: 2rem;
+}
+
+.nav_item_admin {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav_item_admin_active {
+    background: rgba(79, 70, 229, 0.1);
+    color: white;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.main_content {
+    flex: 1;
+    padding: 2.5rem;
+    overflow-y: auto;
+}
+
+.kpi_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.kpi_card {
+    background: #1e293b;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kpi_label {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.kpi_value {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.dashboard_flex {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.map_card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.notification_card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status_badge_critical {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
