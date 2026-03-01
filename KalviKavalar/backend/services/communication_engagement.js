@@ -74,6 +74,12 @@ const GamificationEngine = {
 
         await db.set('gamificationProfiles', studentId, profile);
         return { newPoints: profile.points, level: profile.level };
+    },
+
+    async getProfile(studentId) {
+        return await db.get('gamificationProfiles', studentId) || {
+            studentId, points: 0, level: 1, streak: { current: 0, longest: 0 }
+        };
     }
 };
 

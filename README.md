@@ -52,6 +52,26 @@ graph TD
     Logic <--> Intervention
 ```
 
+### 🤖 Kalvi Thunai (Intelligent Chatbot)
+**Kalvi Thunai** (Education Companion) is the bilingual, AI-powered interface that connects students, parents, and teachers to the 15-agent system through a friendly chat interface.
+
+#### 🧠 Chatbot Architecture
+```mermaid
+graph TD
+    User([User]) --> Input[Input Layer: Text/Voice]
+    Input --> Lang[Language Detector: Tamil/English]
+    Lang --> Intent[Intent Classifier]
+    Intent --> Logic{Role Logic}
+    Logic --> Student[Student Intents]
+    Logic --> Parent[Parent Intents]
+    Logic --> Others[Teacher/Mentor Intents]
+    Student --> Data[Agent Data: Risk/Points/Content]
+    Parent --> Alert[Emergency Dispatcher]
+    Data --> Response[Response Engine]
+    Alert --> Response
+    Response --> Out[Output: Rich Cards/Voice]
+```
+
 ---
 
 ## 3. The Solution: A Multi-Platform Ecosystem
