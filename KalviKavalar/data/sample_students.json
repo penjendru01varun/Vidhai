@@ -1,0 +1,59 @@
+[
+  {
+    "id": "STU101",
+    "name": "Ananya R",
+    "class": "9-B",
+    "block": "Andipatti",
+    "attendance_history": [
+      {"date": "2026-02-01", "status": "PRESENT"},
+      {"date": "2026-02-02", "status": "PRESENT"},
+      {"date": "2026-02-03", "status": "ABSENT", "reason": "Fever"},
+      {"date": "2026-02-04", "status": "PRESENT"},
+      {"date": "2026-02-05", "status": "ABSENT", "reason": "Harvest help"}
+    ],
+    "family_factors": {
+      "bpl_card": true,
+      "distance_km": 6,
+      "parent_literacy": "low"
+    },
+    "career_interest": "Nursing"
+  },
+  {
+    "id": "STU102",
+    "name": "Meera S",
+    "class": "10-A",
+    "block": "Bodinayakanur",
+    "attendance_history": [
+      {"date": "2026-02-01", "status": "PRESENT"},
+      {"date": "2026-02-02", "status": "PRESENT"},
+      {"date": "2026-02-03", "status": "PRESENT"},
+      {"date": "2026-02-04", "status": "ABSENT", "reason": "Family function"},
+      {"date": "2026-02-05", "status": "ABSENT", "reason": "No transport"}
+    ],
+    "family_factors": {
+      "bpl_card": false,
+      "distance_km": 2,
+      "parent_literacy": "medium"
+    },
+    "career_interest": "Teaching"
+  },
+  {
+    "id": "STU103",
+    "name": "Kavitha K",
+    "class": "8-C",
+    "block": "Uthamapalayam",
+    "attendance_history": [
+      {"date": "2026-02-01", "status": "ABSENT"},
+      {"date": "2026-02-02", "status": "ABSENT"},
+      {"date": "2026-02-03", "status": "ABSENT"},
+      {"date": "2026-02-04", "status": "ABSENT"},
+      {"date": "2026-02-05", "status": "ABSENT"}
+    ],
+    "family_factors": {
+      "bpl_card": true,
+      "distance_km": 8,
+      "parent_literacy": "low"
+    },
+    "career_interest": "Business"
+  }
+]

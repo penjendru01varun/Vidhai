@@ -1,0 +1,14 @@
+﻿≡ƒÜÇ STARTING SIMULATION: KALVI KAVALAR SEASONAL INTERVENTION
+------------------------------------------------------------
+≡ƒôà SEASONAL CHECK: Harvest Season - Risk of Child Labor
+≡ƒôê RISK FACTOR: x1.5
+≡ƒöì ANALYZING STUDENT: STU_THENI_001 (Andipatti Block)
+≡ƒºá AI ASSESSMENT (Agent 1): CRITICAL (127.5%)
+ΓÜá∩╕Å WARNINGS: Consecutive Absences (3 days), Peak Grapes Harvest Season, Sibling already dropped out
+≡ƒÜ¿ CRITICAL THRESHOLD BREACHED. TRIGGERING EMERGENCY DISPATCH...
+≡ƒôí [DISPATCH] To LABOR_DEPT: EMERGENCY: CHILD_LABOR - Target Student: Ananya (Andipatti). Parent: Muthulakshmi. Status: Verify workplace location in Theni harvest areas.
+≡ƒôí [DISPATCH] To TEACHER: EMERGENCY: CHILD_LABOR - Target Student: Ananya (Andipatti). Parent: Muthulakshmi. Status: Verify workplace location in Theni harvest areas.
+≡ƒôí [DISPATCH] To LOCAL_NGO: EMERGENCY: CHILD_LABOR - Target Student: Ananya (Andipatti). Parent: Muthulakshmi. Status: Verify workplace location in Theni harvest areas.
+------------------------------------------------------------
+Γ£à SIMULATION COMPLETE: Intervention Logged in Firestore.
+
