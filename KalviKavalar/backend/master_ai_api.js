@@ -32,6 +32,11 @@ const KalviKavalarAI = {
     // 🚀 MASTER SIMULATION: END-TO-END FLOW
     async runDailyIntelligenceCycle() {
         Logger.info('MasterAI', 'Starting Daily Processing Cycle...');
+        if (!Predictive || !Predictive.DropoutPredictor) {
+            Logger.error('MasterAI', 'CRITICAL: Predictive module or DropoutPredictor is undefined!');
+            console.log('Predictive object state:', Predictive);
+            throw new Error('Predictive module load failed');
+        }
 
         // 1. Predict Risks (Agent 1)
         const students = await db.list('students');
@@ -60,7 +65,7 @@ const KalviKavalarAI = {
     Predictor: Predictive.DropoutPredictor,
     Warning: Predictive.EarlyWarningSystem,
     RiskAnalyzer: Predictive.RiskFactorAnalyzer,
-    PatternDetector: KalviKavalarAI.detectPatterns, // Self-contained here
+    PatternDetector: (studentId) => KalviKavalarAI.detectPatterns(studentId), // Self-contained here
     Communicator: Comm.ParentCommunicator,
     Voice: Comm.VoiceAssistant,
     Emergency: Ops.EmergencyDispatcher,

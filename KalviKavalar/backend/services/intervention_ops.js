@@ -52,7 +52,7 @@ const MentorMatcher = {
             if (m.block === student.block) score += 50;
             if (m.village === student.village) score += 30;
             if (m.careerPath === student.careerInterest) score += 40;
-            if (m.languages.includes('Tamil')) score += 10;
+            if (m.languages && m.languages.includes('Tamil')) score += 10;
             return { mentorId: m.id, name: m.name, score };
         });
 

@@ -4,6 +4,7 @@
  */
 
 const { db, Logger, randomUUID } = require('../core/infrastructure');
+const { EmergencyDispatcher } = require('./intervention_ops');
 
 // 🛡️ AGENT 1: DROPOUT PREDICTOR
 // Purpose: Proactive detection of at-risk students 

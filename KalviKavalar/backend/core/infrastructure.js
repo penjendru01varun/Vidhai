@@ -20,11 +20,11 @@ const db = {
         return true;
     },
     async query(collection, filterFn) {
-        const docs = Object.values(this.collections[collection] || {});
+        const docs = Object.entries(this.collections[collection] || {}).map(([id, data]) => ({ id, ...data }));
         return docs.filter(filterFn);
     },
     async list(collection) {
-        return Object.values(this.collections[collection] || {});
+        return Object.entries(this.collections[collection] || {}).map(([id, data]) => ({ id, ...data }));
     }
 };
 

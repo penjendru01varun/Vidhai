@@ -27,12 +27,12 @@ const containerVariants = {
         opacity: 1,
         transition: { staggerChildren: 0.1, delayChildren: 0.2 }
     }
-};
+} as const;
 
 const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100 } }
-};
+} as const;
 
 export default function StudentHome() {
     const [greeting, setGreeting] = useState("Vanakam");
@@ -60,8 +60,8 @@ export default function StudentHome() {
                     x: [0, 20, 0]
                 }}
                 transition={{ duration: 10, repeat: Infinity }}
-                style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, var(--glow-magenta), transparent)', z- index: 0 }}
-      />
+                style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, var(--glow-magenta), transparent)', zIndex: 0 }}
+            />
 
             {/* Header Segment */}
             <motion.header className={styles.header} variants={itemVariants}>
