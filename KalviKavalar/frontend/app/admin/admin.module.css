@@ -106,3 +106,173 @@
     font-size: 0.7rem;
     font-weight: 700;
 }
+
+/* 🏫 SCHOOLS VIEW STYLES */
+.schools_view_container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.school_summary_card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.school_data_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.school_data_table th {
+    text-align: left;
+    padding: 1.2rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    color: #94a3b8;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.school_data_table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 0.95rem;
+}
+
+.total_row {
+    font-weight: 800;
+    background: rgba(79, 70, 229, 0.1) !important;
+    color: white;
+}
+
+.block_list_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.block_school_card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.block_name {
+    color: var(--admin-indigo);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.school_item_mini {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school_type_label {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--admin-indigo);
+}
+
+/* 🗺️ HEATMAP VIEW STYLES */
+.heatmap_view_container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.map_visualization_card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.theni_svg_map {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.map_block {
+    cursor: pointer;
+    transition: all 0.3s;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 1;
+}
+
+.map_block:hover {
+    stroke: white;
+    stroke-width: 2;
+}
+
+/* 🔔 ALERTS VIEW STYLES */
+.alert_full_card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.alert_full_card:hover {
+    transform: translateX(10px);
+}
+
+.severity_tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+.sev_critical {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.sev_high {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+.sev_medium {
+    background: rgba(79, 70, 229, 0.2);
+    color: #4f46e5;
+}

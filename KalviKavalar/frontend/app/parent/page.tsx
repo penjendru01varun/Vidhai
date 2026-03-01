@@ -22,6 +22,11 @@ const listVariants = {
     visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.15 } }
 };
 
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+};
+
 export default function ParentDashboard() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [activeTab, setActiveTab] = useState('listen');
@@ -49,7 +54,7 @@ export default function ParentDashboard() {
                     <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: 600, opacity: 0.6 }}>Good Afternoon, Mother!</p>
                     <h2>Vanakam! வணக்கம்!</h2>
                 </div>
-            </motion.header>
+            </motion.div>
 
             {/* High-Impact Status Card (Accessibility Focus) */}
             <motion.div

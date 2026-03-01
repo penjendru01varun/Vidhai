@@ -6,11 +6,12 @@
 ---
 
 ## 1. Problem Statement
-Rural girl students in Theni face a distinct set of challenges that lead to high dropout rates, especially during transition years (Grades 8-10):
-*   **Economic Seasonal Cycles**: Peak harvest seasons (Grapes, Tea) often force girls into child labor to support family income.
-*   **Cultural Pressures**: Negative parental attitudes towards higher education and the persisting risk of child marriage.
-*   **Infrastructure Gaps**: Lack of immediate notification systems for schools and parents when a student is absent.
-*   **Literacy Barriers**: Traditional text-based apps fail to engage parents with low literacy levels.
+**Reducing School Dropout Rates Among Rural Girls** is a critical mission for the Theni district. High school dropout rates in Theni, especially for girls, stem from a combination of systemic issues:
+
+*   **Poverty & Economic Seasonal Cycles**: Extreme poverty and peak harvest seasons (Grapes, Tea, Coffee) often force girls into child labor to supplement family income.
+*   **Negative Parental Attitudes & Cultural Pressures**: A lack of parental value on higher education for girls, coupled with the persisting risk of early child marriage.
+*   **Poor School Infrastructure & Communication Gaps**: Lack of transport, safe facilities, and immediate notification systems to alert parents when a student is absent.
+*   **Literacy Barriers**: Rural parents often find standard text-based apps difficult to navigate, leading to low engagement with existing educational platforms.
 
 ---
 
